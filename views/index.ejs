@@ -1,0 +1,25 @@
+
+<%- include("header") -%>
+    <div class="box" id="heading">
+        <h1>
+            <%= toDay %>
+       </h1>
+    </div>
+    
+    <div class="box">
+        <% for (var i=0;i<tasks.length;i=i+1){ %>
+        <div class="item">
+            <input type="checkbox">
+                <p><%= tasks[i] %></p>
+        </div>
+        <% } %> 
+        <form class="item" action="/" method="post">
+            <input type="text" name="task" placeholder="task" autocomplete="off">
+            <button type="submit" name="list" value= <%= toDay %>>+</button>
+        </form>
+
+    </div>
+        
+<%- include("fotter") -%>
+        
+ 
